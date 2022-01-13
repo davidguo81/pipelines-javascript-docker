@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: davidguopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: davidguopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: davidguopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: davidguopipelinesjavascriptdocker 
+          image: kjgjttapp.azurecr.io/davidguopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
